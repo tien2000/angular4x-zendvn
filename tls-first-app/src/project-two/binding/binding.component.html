@@ -1,0 +1,15 @@
+=======================================
+<h4>{{ title }} - {{ showInfo() }}</h4>
+
+<!-- Attribute -->
+<a href="{{ link }}">TEMPLATE SYNTAX</a><br>
+<a [href] = "link">TEMPLATE SYNTAX 2</a><br>
+<a bind-href = "link">TEMPLATE SYNTAX 3</a><br>
+<a [attr.href] = "link">TEMPLATE SYNTAX 4</a><br>
+
+<!-- Class -->
+<p [class.title] = "isActive">NeoTien</p>
+
+
+<button [style.color]="isActive ? 'red': 'green'">Red</button>
+<button [style.background-color]="isActive ? 'cyan': 'grey'" >Save</button>
