@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'tls-app',
-  templateUrl: '../template/app.template.html',
+  templateUrl: '../template/project-one/app.template.html',
   styles: [``],
-  styleUrls: ['../template/app.styles.css']
+  styleUrls: ['../template/project-one/app.styles.css']
   
 })
 export class AppComponent {
