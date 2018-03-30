@@ -1,0 +1,14 @@
+<!-- Event Binding -->
+<br>=================================
+<h4>Event Binding</h4>
+
+<button type="button" class="btn btn-info" (click)="btnInfo()">Info</button>
+<button type="button" class="btn btn-danger" on-click="btnDanger($event)">Danger</button>
+
+<div (click)="divClick($event)" style="padding: 10px; background-color: cyan;">
+    <button type="button" class="btn btn-success" on-click="btnClick($event)">Danger</button>
+</div>
+
+<h3>Tag</h3>
+<input type="text" name="tag" (keyup)="onKeyUp($event)" id="" class="form-control" value="" required="required" pattern="" title="">
+<p id="result-tag" style="margin-top: 20px;"></p>
