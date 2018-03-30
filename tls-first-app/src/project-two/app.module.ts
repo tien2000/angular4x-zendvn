@@ -8,6 +8,9 @@ import { StudyMultiAbcComponent } from "./multi-component/study-multi-abc.compon
 import { BindingComponent } from "./binding/binding.component";
 import { EventBindingComponent } from "./binding/event-binding.component";
 import { TwoWayBindingComponent } from "./binding/two-way-binding.component";
+import { NgIfComponent } from "./directive/ng-if.component";
+import { NgForComponent } from "./directive/ng-for.component";
+import { NgSwitchComponent } from "./directive/ng-switch.component";
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { TwoWayBindingComponent } from "./binding/two-way-binding.component";
     StudyMultiAbcComponent,
     BindingComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    NgIfComponent,
+    NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,

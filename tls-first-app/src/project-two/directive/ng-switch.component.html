@@ -1,0 +1,27 @@
+=======================================
+<h2>NgSwitch Component</h2>
+
+<!-- <div [ngSwitch]="toChoise">
+    <span *ngSwitchCase="'happy'">HAPPY</span>
+    <span *ngSwitchCase="'sad'">SAD</span>
+    <span *ngSwitchCase="'confused'">CONFUSED</span>
+    <span *ngSwitchDefault>OTHER</span>
+</div> -->
+
+<ul class="nav nav-tabs">
+    <li role="presentation" [class.active]="tab=='home'"><a (click)="changeTab('home')" href="#">Home</a></li>
+    <li role="presentation" [class.active]="tab=='profile'"><a (click)="changeTab('profile')" href="#">Profile</a></li>
+</ul>
+
+<div [ngSwitch]="tab">
+    <p *ngSwitchCase="'home'">
+        HOME Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, quibusdam!        
+        <button type="button" class="btn btn-info">Home</button>        
+    </p>
+    <p *ngSwitchCase="'profile'">        
+        <span class="label label-success">Profile</span>        
+        PROFILE Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non repellendus expedita quos amet earum et, consequatur a tempora perferendis?
+        <button type="button" class="btn btn-danger">Profile</button>
+    </p>
+    <p *ngSwitchDefault>Default</p>
+</div>

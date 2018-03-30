@@ -1,0 +1,25 @@
+=======================================
+<h2>NgIf Component</h2>
+<h3 *ngIf="isActive">Show NgIf if 'isActive' = true</h3>
+
+<div [class.hidden]="isSpecial">Show with class</div>
+<div [class.hidden]="!isSpecial">Hide with class</div>
+
+<br>=======================================<br>
+<form action="" method="POST" role="form">
+    <legend>Form title</legend>
+
+    <div class="form-group">
+        <label for="">label</label>
+        <input #number (keyup)="0" type="text" class="form-control" id="" placeholder="Input field">
+        
+        <div *ngIf="number.value != '' && number.value <= 10" class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Number</strong> is greater than 10!
+        </div>        
+    </div>   
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
