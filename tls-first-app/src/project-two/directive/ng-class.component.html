@@ -1,0 +1,35 @@
+=======================================
+<h2>Directives - NgClass</h2>
+
+<!-- 
+    [class.glyphicon-th]="!isList"
+    [class.glyphicon-th-list]="isList"
+ -->
+
+<button type="button" class="btn btn-info btn-lg">
+    <span 
+        [class.glyphicon-th]="!isList" 
+        [class.glyphicon-th-list]="isList" 
+        class="glyphicon">
+    </span>    
+    Article
+</button>
+
+<button type="button" class="btn btn-info btn-lg">
+    <span 
+        [ngClass]="{
+            'glyphicon-th'        : !isList,
+            'glyphicon-th-list'   : isList
+        }"        
+        class="glyphicon">
+    </span>
+    Article
+</button>
+
+<button type="button" class="btn btn-info btn-lg">
+    <span 
+        [ngClass]="setCurrentClasses()"
+        class="glyphicon">
+    </span>
+    Article
+</button>

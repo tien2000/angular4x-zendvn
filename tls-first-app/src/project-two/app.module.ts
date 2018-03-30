@@ -11,6 +11,8 @@ import { TwoWayBindingComponent } from "./binding/two-way-binding.component";
 import { NgIfComponent } from "./directive/ng-if.component";
 import { NgForComponent } from "./directive/ng-for.component";
 import { NgSwitchComponent } from "./directive/ng-switch.component";
+import { NgClassComponent } from "./directive/ng-class.component";
+import { NgStyleComponent } from "./directive/ng-style.component";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { NgSwitchComponent } from "./directive/ng-switch.component";
     TwoWayBindingComponent,
     NgIfComponent,
     NgForComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    NgClassComponent,
+    NgStyleComponent    
   ],
   imports: [
     BrowserModule,
