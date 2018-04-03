@@ -1,3 +1,55 @@
 =======================================
 <h2>Angular 4x - Project Setting Template</h2>
 
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">    
+    <div class="panel panel-primary">
+          <div class="panel-heading">
+                <h3 class="panel-title">Setting Template</h3>
+          </div>
+          <div class="panel-body">
+                <label for="">Template</label>                
+                <select (change)="changeTemplate($event)" name="" id="" class="form-control" required="required">
+                    <option value="optBlue">Blue - White</option>
+                    <option value="optBlack">Black - Yellow</option>
+                    <option value="optYellow">Yellow - Red</option>
+                    <option value="custom">Custom</option>
+                </select>
+                
+                <div class="row"
+                    *ngIf="currentTemplate === 'custom'"
+                >
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <label for="">Background Color</label>                            
+                        <input type="color" (change)="changeBgColor($event)" name="" id="" class="form-control" value="#000000" required="required" title=""> 
+                    </div>  
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <label for="">Color</label>                            
+                        <input type="color" (change)="changeTxtColor($event)" name="" id="" class="form-control" value="#ffffff" required="required" title=""> 
+                    </div>                                   
+                </div>
+          </div>
+    </div>    
+</div>
+
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Your Theme</h3>            
+        </div>
+        <div class="panel-body">
+            <label for="">Your Text</label>            
+            <textarea [(ngModel)]="txtContent" name="" id="" class="form-control" rows="3" required="required">{{ txtContent }}</textarea>            
+            <p *ngIf="currentTemplate !== 'custom'" class="result {{ currentTemplate }}">
+                {{ txtContent }}
+            </p>
+            <p *ngIf="currentTemplate === 'custom'" [ngStyle]="setCurrentStyles()" class="result">
+                {{ txtContent }}
+            </p>
+        </div>
+    </div>    
+</div>
+
+
+
+
+
