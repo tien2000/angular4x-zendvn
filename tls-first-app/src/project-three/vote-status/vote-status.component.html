@@ -1,0 +1,19 @@
+=======================================
+<h2>Angular 4x - {{ title }}</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ txtHeader }}</h3>
+    </div>
+    <div class="panel-body">
+        {{ txtContent }}
+    </div>
+    <div class="panel-footer" (mouseleave)="showBtnVote(false)">
+        <p><span (click)="changeStatusColor()" (mouseover)="showBtnVote(true)" class="label label-{{ likeColor }}">{{ voteStatus }}</span></p>        
+        <div *ngIf="showVote == true">
+            <span class="input-group-btn">
+                <button (click)="changeVoteStatus(item)" type="button" class="btn btn-default" *ngFor="let item of arrVote" >{{ item }}</button>
+            </span>        
+        </div>
+    </div>
+</div>
