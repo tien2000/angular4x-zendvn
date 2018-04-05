@@ -5,12 +5,16 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { SettingTemplateComponent } from './setting-template/setting-template.component';
+import { VoteStatusComponent } from './vote-status/vote-status.component';
+import { FormValidateComponent } from './form-validate/form-validate.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SettingTemplateComponent
+    SettingTemplateComponent,
+    VoteStatusComponent,
+    FormValidateComponent
   ],
   imports: [
     BrowserModule,
